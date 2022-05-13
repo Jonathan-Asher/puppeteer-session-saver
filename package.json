@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "start": "node index.js https://www.google.com"
+  },
+  "dependencies": {
+    "puppeteer": "^14.1.0"
+  }
+}
