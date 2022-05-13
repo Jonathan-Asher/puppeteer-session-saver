@@ -1,21 +1,19 @@
 const puppeteer = require('puppeteer');
 const fs = require('fs');
 
-const url = process.argv[2];
-
-if (!url) {
-    throw "Please provide a URL as the first argument";
-}
-
-async function run () {
-  const browser = await puppeteer.launch();
-  const page = await browser.newPage();
-  await page.goto(url);
-  await uploadFileToPage(page);
-  await savePageToFile(page);
-  await page.screenshot({path: 'screenshot.png'});
-  browser.close();
-}
+// async function run () {
+//   const url = process.argv[2];
+//   if (!url) {
+//       throw "Please provide a URL as the first argument";
+//   }
+//   const browser = await puppeteer.launch();
+//   const page = await browser.newPage();
+//   await page.goto(url);
+//   await uploadFileToPage(page);
+//   await savePageToFile(page);
+//   await page.screenshot({path: 'screenshot.png'});
+//   browser.close();
+// }
 
 async function uploadFileToPage(page, filename = 'data') {
   var data = await fileToObject(filename);
@@ -68,4 +66,11 @@ async function objectToFile(obj, filename) {
     fs.writeFileSync(filename+'.json', data);
 }
 
-run();
+// run();
+
+module.exports = {
+  objectToFile,
+  fileToObject,
+  savePageToFile,
+  uploadFileToPage
+}

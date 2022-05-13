@@ -4,5 +4,20 @@
   },
   "dependencies": {
     "puppeteer": "^14.1.0"
-  }
+  },
+  "name": "puppeteer-session-saver",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jonathan-Asher/puppeteer-session-saver.git"
+  },
+  "author": "Jonathan Ashurov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jonathan-Asher/puppeteer-session-saver/issues"
+  },
+  "homepage": "https://github.com/Jonathan-Asher/puppeteer-session-saver#readme",
+  "description": ""
 }
